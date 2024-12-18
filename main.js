@@ -1,44 +1,26 @@
+const dynamicText = document.querySelector(".dynamic-text");
+const words = ["Front-End Developer.", "Designer.", "Content Creator."]; // Add your words
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
 
-// Ensure jQuery is loaded before this script.
-var i = 0; // Current character index
-var a = 0; // Current text index
-var isBackspacing = false; // Backspacing state
-var textArray = [
-  "Developer.",
-  "Graphics Designer.",
-  "Data Analyst."
-];
-
-var speedTyping = 100; // Typing speed in ms
-var speedErasing = 50; // Backspace speed in ms
-var pauseDelay = 1000; // Pause before backspacing or typing
-
-// Start the typing effect
-typeWriter();
-
-function typeWriter() {
-  var dynamicText = $(".dynamic-text");
-
-  if (!isBackspacing) {
-    // Typing Mode
-    if (i < textArray[a].length) {
-      dynamicText.text(dynamicText.text() + textArray[a].charAt(i));
-      i++;
-      setTimeout(typeWriter, speedTyping);
-    } else {
-      isBackspacing = true; // Switch to backspacing after typing
-      setTimeout(typeWriter, pauseDelay);
+function typeEffect() {
+  const currentWord = words[wordIndex];
+  dynamicText.textContent = currentWord.slice(0, charIndex) + "|";
+  if (!isDeleting) {
+    charIndex++;
+    if (charIndex === currentWord.length) {
+      isDeleting = true;
+      setTimeout(typeEffect, 1000); // Pause before deleting
+      return;
     }
   } else {
-    // Backspacing Mode
-    if (i > 0) {
-      dynamicText.text(dynamicText.text().substring(0, dynamicText.text().length - 1));
-      i--;
-      setTimeout(typeWriter, speedErasing);
-    } else {
-      isBackspacing = false; // Switch to typing after backspacing
-      a = (a + 1) % textArray.length; // Move to the next text in the array
-      setTimeout(typeWriter, pauseDelay);
+    charIndex--;
+    if (charIndex === 0) {
+      isDeleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
     }
   }
+  setTimeout(typeEffect, 150); // Typing speed
 }
+typeEffect();
