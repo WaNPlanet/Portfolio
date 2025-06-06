@@ -3,498 +3,212 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>OFOSUHENE's Portfolio</title>
     <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
-  <style>
-      html {
-    scroll-behavior: smooth; /* Enables smooth scrolling */
-  }
 
+  <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100" tabindex="0">
 
-section {
-  scroll-margin-top: 80px; /* Adjusts where the section stops */
-}
-
-     .social-buttons {
-      display: flex;
-      gap: 15px;
-      /* justify-content: center; */
-      margin: 20px 0;
-    }
-
-    .social-button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: linear-gradient(145deg, #ffffff, #d9d9d9);
-      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.7);
-      text-decoration: none;
-      color: #444;
-      font-size: 20px;
-      transition: all 0.3s ease;
-    }
-
-    .social-button:hover {
-      transform: translateY(-5px);
-      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2), 0px -10px 20px rgba(255, 255, 255, 0.5);
-    }
-
-    .social-button.facebook {
-      color: #1877f2;
-    }
-
-    .social-button.twitter {
-      color: #1da1f2;
-    }
-
-    .social-button.instagram {
-      background: radial-gradient(circle, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-      color: #fff;
-    }
-
-    .social-button.linkedin {
-      color: #0077b5;
-    }
-
-    .social-button.youtube {
-      color: #ff0000;
-    }
-    body{
-        background-color: #ECF0F3;
-   
-    }
-    .output {
-  /* text-align:center; */
-  /* font-family: 'Source Code Pro', monospace; */
-  /* color:white; */
-  h1 {
-    font-size:30px;
-  }
-}
-
-.cursor {
-  border-right: 2px solid black;
-  animation: blink 0.7s steps(2, start) infinite;
-}
-
-@keyframes blink {
-  to {
-    border-color: transparent;
-  }
-}
-
-.header {
-    background-color: transparent;
-    transition: background-color 0.3s ease;
-  }
-  .header.scrolled {
-    background-color: #1c1c1e;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-.card-list {
-    display: grid;
-    /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
-    /* max-width: 1250px; */
-    margin: 20px auto;
-    padding: 5px;
-    gap: 20px;
-}
-
-.card-list .card-item {
-    /* background: #fff; */
-    padding: 26px;
-    /* border-radius: 8px; */
-    /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04); */
-    list-style: none;
-    cursor: pointer;
-    text-decoration: none;
-    /* border: 2px solid transparent; */
-    transition: border 0.5s ease;
-    /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.19);
-      border-radius: 16px;
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(7.2px);
-      -webkit-backdrop-filter: blur(7.2px);
-      border: 1px solid rgba(255, 255, 255, 0.6);
-}
-
-/* .card-list .card-item:hover {
-    border: 2px solid #000;
-} */
-
-.card-list .card-item img {
-    width: 100%;
-    aspect-ratio: 16/9;
-    border-radius: 8px;
-    object-fit: cover;
-}
-
-.card-list span {
-    display: inline-block;
-    background: #F7DFF5;
-    margin-top: 32px;
-    padding: 8px 15px;
-    font-size: 0.75rem;
-    border-radius: 50px;
-    font-weight: 600;
-}
-
-.card-list .developer {
-    background-color: #F7DFF5; 
-    color: #B22485;
-}   
-
-.card-list .designer {
-    background-color: #d1e8ff;
-    color: #2968a8;
-}
-
-.card-list .editor {
-    background-color: #d6f8d6; 
-    color: #205c20;
-}
-
- .card-item h3 {
-    color: #000;
-    font-size: 1.438rem;
-    margin-top: 28px;
-    font-weight: 600;
-} 
-
-@media (max-width: 1200px) {
-    .card-list .card-item {
-        padding: 10px;
-    }
-}
-
-@media screen and (max-width: 980px) {
-    .card-list {
-        margin: 0 auto;
-    }
-}
-.card-list .card-item {
-    position: relative;
-    overflow: hidden;
-}
-
-.card-list .card-item img {
-    transition: transform 0.3s ease; /* Smooth zoom effect */
-}
-
-.card-list .card-item:hover img {
-    transform: scale(1.1); /* Zoom in the image */
-}
-
-.card-list .card-item:hover .arrow {
-    background: #000;
-    color: #fff;
-}
-
-.custom-modal {
-  border-radius: 15px;
-  /* padding: 20px; */
-  background-color: #ECF0F3;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
- /* From https://css.glass */
-background: rgba(255, 255, 255, 0.14);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(9.4px);
--webkit-backdrop-filter: blur(9.4px);
-border: 1px solid rgba(255, 255, 255, 0.41);
-}
-
-.modal-body {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  
-}
-
-.modal-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.modal-text {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.modal-subtitle {
-  color: #6c757d;
-  font-size: 14px;
-  text-transform: uppercase;
-  margin-bottom: 5px;
-}
-
-.modal-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.modal-buttons .btn {
-  margin-right: 10px;
-  border-radius: 25px;
-  padding: 10px 20px;
-}
-
-.modal-buttons .btn-primary {
-  background-color: #f43b47;
-  border: none;
-}
-
-.modal-close {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  color: #333;
-  background: transparent;
-  font-size: 1.5rem;
-  border: none;
-}
-
-/* Media query for small devices */
-@media screen and (max-width: 768px) {
-  .modal-body {
-    flex-direction: column; /* Stack image and text vertically */
-  }
-
-  .modal-image, .modal-text {
-    flex: none; /* Remove equal spacing */
-    width: 100%; /* Take full width */
-  }
-
-  .modal-image img {
-    margin-bottom: 15px; /* Add some spacing below the image */
-  }
-}
-.profile-image img {
-      max-width: 100%;
-      border-radius: 15px;
-    }
-   
-    .modal-custom {
-  background: rgba(226, 232, 236, 1);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(226, 232, 236, 0.02);
-}
-
-.modal-img {
-  max-width: 90%;
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-.custom-navbar {
-  background-color: #ECF0F3; /* Set background color */
-  transition: background-color 0.3s ease-in-out;
-}
-
-.nav-link {
-  color: #333; /* Default text color for links */
-  transition: color 0.3s ease-in-out;
-}
-
-.nav-link:hover {
-  color: #555; /* Slightly darker text on hover */
-}
-
-.navbar-brand {
-  color: #333; /* Brand text color */
-  transition: color 0.3s ease-in-out;
-}
-
-.navbar-brand:hover {
-  color: #555; /* Slightly darker brand text on hover */
-}
-.custom-navbar.scrolled {
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box shadow added when scrolled */
-}
-a{
-  text-decoration: none;
-}
-.contact-link {
-  color: black; /* Default link color */
-  text-decoration: none; /* Optional: Remove underline */
-  transition: color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-.contact-link:hover {
-  color: #ff014f; /* Hover color */
-}
-
-button.btn {
-  width: 100%; /* Makes the button take the full width of its container */
-  /* background-color: #ECF0F3; Default background color */
-  color: #333; /* Default text color */
-  border: none; /* Removes the border */
-  padding: 10px 20px; /* Adds padding for a comfortable size */
-  font-size: 16px; /* Adjust font size */
-  border-radius: 5px; /* Optional: Adds rounded corners */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
-  /* From https://css.glass */
-background: rgba(236, 240, 243, 0.94);
-
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(11.2px);
--webkit-backdrop-filter: blur(11.2px);
-
-}
-
-button.btn:hover {
-  background-color: #ff014f; /* Hover background color */
-  color: #fff; /* Changes text color to white on hover */
-}
-
-  </style>
-  <body>
-
-    <div class="container-fluid">
-      <nav class="navbar navbar-expand-lg fixed-top custom-navbar" style="height: 70px;">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">PERSONAL</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">HOME</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#projects">PROJECTS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#upcoming">UPCOMING</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">CONTACT</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
+  <!-- =======================================
+     NAVIGATION BAR (HEADER)
+     Fixed-top responsive navbar for site navigation
+======================================= -->
+<div class="container-fluid">
+  <nav id="navbar" class="navbar navbar-expand-lg fixed-top custom-navbar" style="height: 70px;">
     
+    <!-- ================================
+         NAVBAR BRAND AND TOGGLER BUTTON
+         Logo/brand on the left & toggle button for mobile
+    ================================= -->
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">OFOSUHENE</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- ================================
+           NAVIGATION LINKS
+           Collapsible nav links aligned to the right
+      ================================= -->
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">PROJECTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#upcoming">UPCOMING</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
   
    
+<!-- ===================================================
+     HERO SECTION (WELCOME AREA)
+     Introduction area with greeting, title, description,
+     social links, and profile image
+=================================================== -->
 
-<br><br> <br>
-      <section  style="padding: 20px; margin-top: 10px;">
-        <div class="container">
-          <div class="row justify-content-between">
-            <div class="col-12 col-md-6">
-              <h6 style="font-weight: 500; font-family: Montserrat">
-                WELCOME TO MY SPACE
-              </h6>
-              <br>
-              <div class="output " id="output">
-                <p class="display-4 display-md-1 fw-bold">
-                  Hi, I’m <span style="color: #ff014f;">OFOSUHENE</span>
-                </p>
-                <h1 style="font-weight: 700;font-size: 48px;">a <span class="dynamic-text "></span></h1>
-              </div> <br>
-              <p style="font-weight: 500; font-family: Montserrat">
-                With a background in front-end development, a strong foundation in web technologies, and a keen eye for user-centered design, I am confident in my ability to contribute effectively to your team and help deliver high-quality, visually appealing, and functional web applications.
-
-              </p>
-              <br>
-              <p>WHERE TO FIND ME</p>
-              <div class="social-buttons">
-                <a  target="_blank" href="#" class="social-button facebook"><i class="fab fa-facebook-f"></i></a>
-                <a target="_blank" href="#" class="social-button twitter"><i class="fab fa-twitter"></i></a>
-                <a target="_blank" href="https://www.instagram.com/_wan_planet/" class="social-button instagram"><i class="fab fa-instagram"></i></a>
-                <a target="_blank" href="www.linkedin.com/in/ofosuhene-kyere-267076246" class="social-button linkedin"><i class="fab fa-linkedin-in"></i></a>
-                <a target="_blank" href="https://www.youtube.com/channel/UCNiNebypBxEyEIA_h7ls6LA" class="social-button youtube"><i class="fab fa-youtube"></i></a>
-              </div>
-
-            </div>
-            <div class="col-12 col-md-6 ">
-              <div class="profile-image">
-                <img src="pexels-sora-shimazaki-5669630-removebg-preview.png" alt="Profile Image">
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-<br>
-<hr>
+<br><br><br>
+<section style="padding: 20px; margin-top: 10px;">
+  <div class="container">
+    <div class="row justify-content-between">
       
-   <!-- Modal Trigger -->
-<section id="projects" class="container pt-5 pb-3">
-  <p class="text-center fw-bold" style="font-family: Montserrat; color: #ff014f;">Visit my projects</p>
-  <h4 class="text-center fw-bold" style="font-family: Montserrat; font-size: 45px; margin-bottom: 20px;">PROJECTS</h4>
-  
-  <div class="row g-4">
-    <!-- Card 1 -->
+      <!-- =====================================
+           TEXTUAL CONTENT (LEFT COLUMN)
+           Includes greeting, name, dynamic role, 
+           personal intro, and social media links
+      ====================================== -->
+      <div class="col-12 col-md-6">
+        <!-- Welcome Text -->
+        <h6 style="font-weight: 500; font-family: Montserrat">
+          WELCOME TO MY SPACE
+        </h6>
+        <br>
+
+        <!-- Name & Role Display -->
+        <div class="output" id="output">
+          <p class="display-4 display-md-1 fw-bold">
+            Hi, I’m <span style="color: #ff014f;">OFOSUHENE</span>
+          </p>
+          <h1 style="font-weight: 700;font-size: 48px;">
+            a <span class="dynamic-text"></span>
+          </h1>
+        </div>
+        <br>
+
+        <!-- Short Bio -->
+        <p style="font-weight: 500; font-family: Montserrat">
+          With a background in front-end development, a strong foundation in web technologies,
+          and a keen eye for user-centered design, I am confident in my ability to contribute effectively 
+          to your team and help deliver high-quality, visually appealing, and functional web applications.
+        </p>
+        <br>
+
+        <!-- Social Media Section -->
+        <p>WHERE TO FIND ME</p>
+        <div class="social-buttons">
+          <!-- Social Media Icons (Dribbble, Instagram, LinkedIn, YouTube) -->
+          <a target="_blank" href="https://dribbble.com/WaN_Planet" class="social-button twitter"><i class="fab fa-dribbble"></i></a>
+          <!-- <a target="_blank" href="https://www.instagram.com/_wan_planet/" class="social-button instagram"><i class="fab fa-instagram"></i></a> -->
+          <a target="_blank" href="https://www.linkedin.com/in/ofosuhene-kyere-267076246" class="social-button linkedin"><i class="fab fa-linkedin-in"></i></a>
+          <a target="_blank" href="https://www.youtube.com/channel/UCNiNebypBxEyEIA_h7ls6LA" class="social-button youtube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- =====================================
+           PROFILE IMAGE (RIGHT COLUMN)
+           Professional image to complement intro
+      ====================================== -->
+      <div class="col-12 col-md-6">
+        <div class="profile-image">
+          <img src="pexels-sora-shimazaki-5669630-removebg-preview.png" alt="Profile Image">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Divider for visual separation -->
+<hr>
+
+      
+
+
+  <!-- ======== PROJECTS SECTION ======== -->
+<section id="projects"  class="container" style="min-height:100vh;padding-top:30px; padding-bottom: 20px;">
+
+  <!-- Introductory Text -->
+  <p class="text-center fw-bold" style="font-family: Montserrat; color: #ff014f;">
+    Visit my projects
+  </p>
+  <h4 class="text-center fw-bold" style="font-family: Montserrat; font-size: 45px; margin-bottom: 20px;">
+    PROJECTS
+  </h4>
+
+  <!-- Featured Projects Grid -->
+  <div class="row g-4 featured-projects">
+
+    <!-- === Project Card 1 === -->
     <div class="col-12 col-sm-6 col-lg-4">
       <div class="card-list">
-        <a href="#" class="card-item" style="background-color: #ECF0F3;" 
+        <a 
+          href="#" 
+          class="card-item" 
+          style="background-color: #ECF0F3;" 
           data-bs-toggle="modal" 
           data-bs-target="#dynamicModal"
           data-title="Art Shop" 
           data-img="img/art.png" 
           data-link="https://wanplanet.github.io/art-shop/"
-          data-desc="Unleash your creativity and explore our vibrant world of art supplies! Our online art shop offers a wide range of materials, from paints and canvases to brushes and easels. Whether you're a seasoned artist 
-          or just starting out, we've got everything you need to bring your imagination to life..">
+          data-desc="Unleash your creativity and explore our vibrant world of art supplies! ..."
+        >
           <img src="img/art.png" alt="Card Image">
           <span class="developer">Developer</span>
           <h3 style="font-weight: 500; font-size: 25px;">Art Shop</h3>
         </a>
       </div>
     </div>
-    
-    <!-- Card 2 -->
+
+    <!-- === Project Card 2 === -->
     <div class="col-12 col-sm-6 col-lg-4">
       <div class="card-list">
-        <a href="#" class="card-item" style="background-color: #ECF0F3;"
+        <a 
+          href="#" 
+          class="card-item" 
+          style="background-color: #ECF0F3;" 
           data-bs-toggle="modal" 
           data-bs-target="#dynamicModal"
           data-title="Alumni Page" 
           data-img="img/res.png" 
           data-link="https://wanplanet.github.io/Central/"
-          data-desc="Stay connected with your alma mater and fellow graduates! .">
+          data-desc="Stay connected with your alma mater and fellow graduates!"
+        >
           <img src="img/res.png" alt="Card Image">
           <span class="developer">Developer</span>
           <h3 style="font-weight: 500; font-size: 25px;">Alumni Page</h3>
         </a>
       </div>
     </div>
-         <!-- card 3 -->
+
+    <!-- === Project Card 3 === -->
     <div class="col-12 col-sm-6 col-lg-4">
       <div class="card-list">
-        <a href="#" class="card-item" style="background-color: #ECF0F3;"
+        <a 
+          href="#" 
+          class="card-item" 
+          style="background-color: #ECF0F3;" 
           data-bs-toggle="modal" 
           data-bs-target="#dynamicModal"
           data-title="Inventory" 
           data-img="img/inventory.png" 
           data-link="https://wanplanet.github.io/inventory/"
-          data-desc=" Easily track and manage your stock levels, stay organized, and optimize your operations!">
+          data-desc="Easily track and manage your stock levels, stay organized, and optimize your operations!"
+        >
           <img src="img/inventory.png" alt="Card Image">
           <span class="developer">Developer</span>
           <h3 style="font-weight: 500; font-size: 25px;">Inventory</h3>
@@ -502,183 +216,94 @@ button.btn:hover {
       </div>
     </div>
 
-      <!-- card 4 -->
-      <div class="col-12 col-sm-6 col-lg-4">
-        <div class="card-list">
-          <a href="#" class="card-item" style="background-color: #ECF0F3;"
-            data-bs-toggle="modal" 
-            data-bs-target="#dynamicModal"
-            data-title="Banking" 
-            data-img="img/banking.png" 
-            data-link="https://wanplanet.github.io/banking/"
-            data-desc="Your trusted partner for all your banking needs.">
-            <img src="img/banking.png" alt="Card Image">
-            <span class="developer">Developer</span>
-            <h3 style="font-weight: 500; font-size: 25px;">Banking</h3>
-          </a>
-        </div>
-      </div>
- 
-      <!-- card 5 -->
-      <div class="col-12 col-sm-6 col-lg-4">
-        <div class="card-list">
-          <a href="#" class="card-item" style="background-color: #ECF0F3;"
-            data-bs-toggle="modal" 
-            data-bs-target="#dynamicModal"
-            data-title="Healthy" 
-            data-img="img/healthy.png" 
-            data-link="https://wanplanet.github.io/healthy/"
-            data-desc="Dedicated to delivering exceptional healthcare services.">
-            <img src="img/healthy.png" alt="Card Image">
-            <span class="developer">Developer</span>
-            <h3 style="font-weight: 500; font-size: 25px;">Healthy</h3>
-          </a>
-        </div>
-      </div>
-    <!-- card 6  -->
-      <div class="col-12 col-sm-6 col-lg-4">
-        <div class="card-list">
-          <a href="#" class="card-item" style="background-color: #ECF0F3;"
-            data-bs-toggle="modal" 
-            data-bs-target="#dynamicModal"
-            data-title="Housing" 
-            data-img="img/housing.png" 
-            data-link="https://wanplanet.github.io/housing/" 
-            data-desc="Expolore our exceptional housing projects.">
-            <img src="img/housing.png" alt="Card Image">
-            <span class="developer">Developer</span>
-            <h3 style="font-weight: 500; font-size: 25px;">Housing</h3>
-          </a>
-        </div>
-      </div>
+  </div> <!-- End of .row -->
 
-       <!-- card 7  -->
-       <div class="col-12 col-sm-6 col-lg-4">
-        <div class="card-list">
-          <a href="#" class="card-item" style="background-color: #ECF0F3;"
-            data-bs-toggle="modal" 
-            data-bs-target="#dynamicModal"
-            data-title="Parking_Lot" 
-            data-img="img/parking_lot.png" 
-            data-link="https://wanplanet.github.io/parking_lot/" 
-            data-desc="Safe, Secure, and Convenient Parking Solutions.">
-            <img src="img/parking_lot.png" alt="Card Image">
-            <span class="developer">Developer</span>
-            <h3 style="font-weight: 500; font-size: 25px;">Parking_Lot</h3>
-          </a>
-        </div>
-      </div>
-
-       <!-- card 8  -->
-       <div class="col-12 col-sm-6 col-lg-4">
-        <div class="card-list">
-          <a href="#" class="card-item" style="background-color: #ECF0F3;"
-            data-bs-toggle="modal" 
-            data-bs-target="#dynamicModal"
-            data-title="Bloggy" 
-            data-img="img/bloggy.png" 
-            data-link="https://wanplanet.github.io/bloggy/" 
-            data-desc="Safe, Secure, and Convenient Parking Solutions.">
-            <img src="img/bloggy.png" alt="Card Image">
-            <span class="developer">Developer</span>
-            <h3 style="font-weight: 500; font-size: 25px;">Bloggy</h3>
-          </a>
-        </div>
-      </div>
-
-      <!-- card 9 -->
-      <div class="col-12 col-sm-6 col-lg-4">
-        <div class="card-list">
-          <a href="#" class="card-item" style="background-color: #ECF0F3;"
-            data-bs-toggle="modal" 
-            data-bs-target="#dynamicModal"
-            data-title="Bloggy" 
-            data-img="img/planet.png" 
-            data-link="https://wanplanet.github.io/Planet_Speaks/" 
-            data-desc="Safe, Secure, and Convenient Parking Solutions.">
-            <img src="img/planet.png" alt="Card Image">
-            <span class="developer">Developer</span>
-            <h3 style="font-weight: 500; font-size: 25px;">Planet Speaks</h3>
-          </a>
-        </div>
-      </div>
-          
-      <!-- card 10 -->
-      <div class="col-12 col-sm-6 col-lg-4">
-        <div class="card-list">
-          <a href="#" class="card-item" style="background-color: #ECF0F3;"
-            data-bs-toggle="modal" 
-            data-bs-target="#dynamicModal"
-            data-title="Boadi Corp." 
-            data-img="img/corp.png" 
-            data-link="https://boadi-corp.vercel.app/" 
-            data-desc="Safe, Secure, and Convenient Parking Solutions.">
-            <img src="img/corp.png" alt="Card Image">
-            <span class="developer">Developer</span>
-            <h3 style="font-weight: 500; font-size: 25px;">Boadi Corp</h3>
-          </a>
-        </div>
-      </div>
-
-
-      <!-- card 11 -->
-      <div class="col-12 col-sm-6 col-lg-4">
-        <div class="card-list">
-          <a href="#" class="card-item" style="background-color: #ECF0F3;"
-            data-bs-toggle="modal" 
-            data-bs-target="#dynamicModal"
-            data-title="Boadi's Energy" 
-            data-img="img/energy.png" 
-            data-link="https://energy-six.vercel.app/" 
-            data-desc="Safe, Secure, and Convenient Parking Solutions.">
-            <img src="img/energy.png" alt="Card Image">
-            <span class="developer">Developer</span>
-            <h3 style="font-weight: 500; font-size: 25px;">Boadi's Energy</h3>
-          </a>
-        </div>
-      </div>
+  <!-- View More Projects Button -->
+  <div class="text-center mt-4">
+    <a 
+      href="projects.html" 
+      class="btn btn-primary" 
+      style="background-color: #ff014f; border: none; font-family: Montserrat; font-weight: 500;"
+    >
+      View More Projects
+    </a>
   </div>
+
 </section>
+<!-- ======== END PROJECTS SECTION ======== -->
+<hr>
 
-
-<!-- Dynamic Modal -->
+<!-- ======== DYNAMIC MODAL ======== -->
 <div class="modal fade" id="dynamicModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content custom-modal">
+
+      <!-- Modal Header (Close Button) -->
       <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button 
+          type="button" 
+          class="btn-close" 
+          data-bs-dismiss="modal" 
+          aria-label="Close">
+        </button>
       </div>
+
+      <!-- Modal Body (Image + Text Content) -->
       <div class="modal-body d-flex align-items-center">
-        <!-- Image Section -->
+
+        <!-- === Image Section === -->
         <div class="modal-image col-md-6" style="padding: 5px;">
-          <img id="modalImage" src="" alt="" style="width: 100%;">
+          <img id="modalImage" src="" alt="Project Image" style="width: 100%;">
         </div>
-        <!-- Text Section -->
+
+        <!-- === Text Section === -->
         <div class="modal-text col-6">
-          <h2 id="modalTitle" class="modal-title" style="font-weight: 700; font-size: 25px;"></h2>
-          <p id="modalDesc" style="font-weight: 500; font-family: Montserrat;"></p>
+          <h2 
+            id="modalTitle" 
+            class="modal-title" 
+            style="font-weight: 700; font-size: 25px;">
+          </h2>
+          <p 
+            id="modalDesc" 
+            style="font-weight: 500; font-family: Montserrat;">
+          </p>
+
+          <!-- Button to View the Project -->
           <div class="modal-buttons">
-            <a id="modalLink" href="#" target="_blank"><button class="btn btn-primary">View Project ➡️</button></a>
+            <a id="modalLink" href="#" target="_blank">
+              <button class="btn btn-primary">View Project ➡️</button>
+            </a>
           </div>
         </div>
-      </div>
+
+      </div> <!-- End of modal-body -->
+
     </div>
   </div>
 </div>
+<!-- ======== END DYNAMIC MODAL ======== -->
 
 
-<br> <hr>
-<br>
-<section  id="upcoming" class="container">
-  <p class="text-center fw-bold" style="font-family: Montserrat; color: #ff014f;">Check my upcomings</p>
-  <h4 class="text-center fw-bold" style="font-family: Montserrat; font-size: 45px; margin-bottom: 20px;">UPCOMING</h4>
-  
-  <div class="row">
-    <!-- Card 1 -->
+
+<!-- ======== UPCOMING PROJECTS SECTION ======== -->
+<section id="upcoming" class="container pb-3" style="padding-top: 50px;">
+
+  <!-- Section Intro -->
+  <p class="text-center fw-bold" style="font-family: Montserrat; color: #ff014f;">
+    Check my upcomings
+  </p>
+  <h4 class="text-center fw-bold" style="font-family: Montserrat; font-size: 45px; margin-bottom: 20px;">
+    UPCOMING
+  </h4>
+
+  <div class="row g-4 featured-upcoming">
+    
+    <!-- ==== Card 1 ==== -->
     <div class="col-12 col-sm-6 col-lg-4">
       <div class="card-list">
         <a href="#" 
            class="card-item" 
+           style="background-color: #ECF0F3;" 
            data-bs-toggle="modal" 
            data-bs-target="#dynamicModal1"
            data-title="Healthy Project 1"
@@ -689,11 +314,13 @@ button.btn:hover {
         </a>
       </div>
     </div>
-    <!-- Card 2 -->
+
+    <!-- ==== Card 2 ==== -->
     <div class="col-12 col-sm-6 col-lg-4">
       <div class="card-list">
         <a href="#" 
            class="card-item" 
+           style="background-color: #ECF0F3;"
            data-bs-toggle="modal" 
            data-bs-target="#dynamicModal1"
            data-title="Healthy Project 2"
@@ -704,12 +331,13 @@ button.btn:hover {
         </a>
       </div>
     </div>
-    
-    <!-- Card 3 -->
+
+    <!-- ==== Card 3 ==== -->
     <div class="col-12 col-sm-6 col-lg-4">
       <div class="card-list">
         <a href="#" 
            class="card-item" 
+           style="background-color: #ECF0F3;"
            data-bs-toggle="modal" 
            data-bs-target="#dynamicModal1"
            data-title="Healthy Project 3"
@@ -720,119 +348,167 @@ button.btn:hover {
         </a>
       </div>
     </div>
-    <!-- Card 4 -->
-    <div class="col-12 col-sm-6 col-lg-4">
-      <div class="card-list">
-        <a href="#" 
-           class="card-item" 
-           data-bs-toggle="modal" 
-           data-bs-target="#dynamicModal1"
-           data-title="Digital Site Project 2"
-           data-image="img/Mr. Everything.png">
-          <img src="img/Mr. Everything.png" alt="Healthy Project Thumbnail">
-          <span class="developer">Developer</span>
-          <h3 style="font-weight: 500; font-size: 25px;">Digital Page Design</h3>
-        </a>
-      </div>
-    </div>
   </div>
-</section>
 
-<!-- Dynamic Modal -->
+  <!-- View More Button -->
+  <div class="text-center mt-4">
+    <a href="upcoming.html" class="btn btn-primary" 
+       style="background-color: #ff014f; border: none; font-family: Montserrat; font-weight: 500;">
+      View All Upcoming
+    </a>
+  </div>
+
+</section>
+<!-- ======== END UPCOMING PROJECTS SECTION ======== -->
+
+
+<!-- =======================
+     Dynamic Modal for Upcoming Projects
+     ======================= -->
 <div class="modal fade" id="dynamicModal1" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-xl">
+  <div class="modal-dialog modal-xl"> <!-- Large, centered modal -->
     <div class="modal-content modal-custom">
-      <div class="modal-header border-0">
+
+      <!-- ===== Modal Header (Close Button Only) ===== -->
+      <div class="modal-header border-0"> <!-- No bottom border -->
+        <!-- Close Button -->
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+
+      <!-- ===== Modal Body (Main Content) ===== -->
       <div class="modal-body d-flex justify-content-center align-items-center">
-        <img id="dynamicModalImage" alt="Dynamic Modal Content" class="img-fluid modal-img">
+        <!-- Dynamic Image (will be set via JavaScript) -->
+        <img 
+          id="dynamicModalImage" 
+          alt="Dynamic Modal Content" 
+          class="img-fluid modal-img" 
+        >
       </div>
-      <div class="modal-footer border-0">
-        <h5 id="dynamicModalTitle" class="text-center"></h5>
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+      <!-- ===== Modal Footer (Title & Close) ===== -->
+      <div class="modal-footer border-0 text-center flex-column">
+        <!-- Dynamic Title (updated via JavaScript) -->
+        <h5 
+          id="dynamicModalTitle" 
+          class="text-center" 
+          style="font-family: Montserrat; font-weight: 600;"
+        ></h5>
+
+        <!-- Close Button -->
+        <button 
+          type="button" 
+          class="btn btn-secondary mt-2" 
+          data-bs-dismiss="modal"
+        >
+          Close
+        </button>
       </div>
+
     </div>
   </div>
 </div>
 
-<br> <hr>
-<section id="contact">
+<!-- ======================
+     CONTACT SECTION
+     ====================== -->
+<br>
+<hr>
+<section id="contact" class="pt-2">
+  <!-- Section Title -->
   <p class="text-center fw-bold" style="font-family: Montserrat; color: #ff014f;">Contact</p>
   <h4 class="text-center fw-bold" style="font-family: Montserrat; font-size: 45px; margin-bottom: 20px;">CONTACT ME</h4>
   
+  <!-- Container for Content -->
   <div class="container text-center">
     <div class="row align-items-start">
+      
+      <!-- ===== Left Column: Contact Info Card ===== -->
       <div class="col-12 col-md-5 col-lg-5">
-        <div class="card-list" style="/* From https://css.glass */
-        background: rgba(236, 240, 243, 1);
-        border-radius: 16px;
-        backdrop-filter: blur(5.2px);
-        -webkit-backdrop-filter: blur(5.2px);
-        border: 1px solid rgba(236, 240, 243, 0.5);">
+        <div class="card-list" style="background: rgba(236, 240, 243, 1); border-radius: 16px; backdrop-filter: blur(5.2px); -webkit-backdrop-filter: blur(5.2px); border: 1px solid rgba(236, 240, 243, 0.5);">
           <div class="card-item" style="text-align: justify;">
+            
+            <!-- Contact Image -->
             <img src="contact.jpg" alt="contact image">
+            
+            <!-- Name and Message -->
             <h3 style="font-weight: 500; font-size: 25px;">OFOSUHENE KYERE</h3>
-            <p style="font-weight: 500; font-family: Montserrat">
+            <p style="font-weight: 500; font-family: Montserrat;">
               I am available for freelance work. Connect with me via my socials and call in to my account.
             </p>
-            <p style="font-weight: 500; font-family: Montserrat">
+            
+            <!-- Phone and Email -->
+            <p style="font-weight: 500; font-family: Montserrat;">
               <a href="tel:+233530729974" class="contact-link">Phone: (+233) 53 072 9974</a> <br>
               <a href="mailto:kyereofosuhene@gmail.com" class="contact-link">Email: kyereofosuhene@gmail.com</a>
             </p>
             
-        </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-7 col-lg-7">
-        <div class="card-list" style="/* From https://css.glass */
-        background: rgba(236, 240, 243, 1);
-        border-radius: 16px;
-        backdrop-filter: blur(5.2px);
-        -webkit-backdrop-filter: blur(5.2px);
-        border: 1px solid rgba(236, 240, 243, 0.5);">
-        <div class="card-item">
-          <form class="row g-3" style="text-align: justify; outline-color: #1c1c1e;">
-            <div class="col-md-6">
-              <label  class="form-label">NAME</label>
-              <input type="name" class="form-control">
-            </div>
-            <div class="col-md-6">
-              <label  class="form-label">NUMBER</label>
-              <input type="number" class="form-control">
-            </div>
-            <div class="col-12">
-              <label  class="form-label">EMAIL</label>
-              <input type="email" class="form-control"  >
-            </div>
-            <div class="col-12">
-              <label  class="form-label">SUBJECT</label>
-              <input type="text" class="form-control" >
-            </div>
-            <div class="col-12">
-              <label for="inputAddress2" class="form-label">YOUR MESSAGE</label>
-              <textarea type="text" class="form-control" id="inputAddress2" ></textarea>
-            </div>
-          </form>
-          <br>
-          <div class="col-12">
-            <button type="submit" class="btn btn-primary">Submit</button>
           </div>
         </div>
-        
-       
       </div>
-       
+
+      <!-- ===== Right Column: Contact Form Card ===== -->
+      <div class="col-12 col-md-7 col-lg-7">
+        <div class="card-list" style="background: rgba(236, 240, 243, 1); border-radius: 16px; backdrop-filter: blur(5.2px); -webkit-backdrop-filter: blur(5.2px); border: 1px solid rgba(236, 240, 243, 0.5);">
+          
+          <div class="card-item">
+            <!-- Contact Form -->
+            <form class="row g-3" style="text-align: justify; outline-color: #1c1c1e;">
+              
+              <!-- Name Input -->
+              <div class="col-md-6">
+                <label class="form-label">NAME</label>
+                <input type="text" class="form-control">
+              </div>
+              
+              <!-- Number Input -->
+              <div class="col-md-6">
+                <label class="form-label">NUMBER</label>
+                <input type="tel" class="form-control">
+              </div>
+              
+              <!-- Email Input -->
+              <div class="col-12">
+                <label class="form-label">EMAIL</label>
+                <input type="email" class="form-control">
+              </div>
+              
+              <!-- Subject Input -->
+              <div class="col-12">
+                <label class="form-label">SUBJECT</label>
+                <input type="text" class="form-control">
+              </div>
+              
+              <!-- Message Textarea -->
+              <div class="col-12">
+                <label class="form-label">YOUR MESSAGE</label>
+                <textarea class="form-control" rows="4"></textarea>
+              </div>
+              
+              <!-- Submit Button -->
+              <div class="col-12 text-start mt-3">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
       </div>
-   
+
     </div>
   </div>
 </section>
 
-<br> <hr>
+<!-- ======================
+     FOOTER SECTION
+     ====================== -->
 <br>
-<section class="container" style="text-align: center;">
-  &copy; 2025. All rights reserved - OFOSUHENE.
+<hr>
+<br>
+
+<!-- Footer container -->
+<section class="container text-center" style="text-align: center;">
+  &copy; 2025. All rights reserved - <strong>OFOSUHENE</strong>.
 </section>
 
 
