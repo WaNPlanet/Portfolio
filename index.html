@@ -153,70 +153,74 @@
   <!-- Featured Projects Grid -->
   <div class="row g-4 featured-projects">
 
-    <!-- === Project Card 1 === -->
-    <div class="col-12 col-sm-6 col-lg-4">
-      <div class="card-list">
-        <a 
-          href="#" 
-          class="card-item" 
-          style="background-color: #ECF0F3;" 
-          data-bs-toggle="modal" 
-          data-bs-target="#dynamicModal"
-          data-title="Art Shop" 
-          data-img="img/art.png" 
-          data-link="https://wanplanet.github.io/art-shop/"
-          data-desc="Unleash your creativity and explore our vibrant world of art supplies! ..."
-        >
-          <img src="img/art.png" alt="Card Image">
-          <span class="developer">Developer</span>
-          <h3 style="font-weight: 500; font-size: 25px;">Art Shop</h3>
-        </a>
-      </div>
-    </div>
+   <!-- Art Shop Project Card -->
+<div class="col-12 col-sm-6 col-lg-4">
+  <div class="card-list">
+    <a 
+      href="#" 
+      class="card-item" 
+      style="background-color: #ECF0F3;" 
+      data-bs-toggle="modal" 
+      data-bs-target="#dynamicModal"
+      data-title="Art Shop" 
+      data-img="img/art.png" 
+      data-link="https://wanplanet.github.io/art-shop/"
+      data-desc="Unleash your creativity and explore our vibrant world of art supplies!"
+      data-tech='["HTML", "CSS", "JavaScript"]'
+      data-tools='["VS Code", "Git"]'
+    >
+      <img src="img/art.png" alt="Card Image">
+      <span class="developer">Developer</span>
+      <h3 style="font-weight: 500; font-size: 25px;">Art Shop</h3>
+    </a>
+  </div>
+</div>
 
-    <!-- === Project Card 2 === -->
-    <div class="col-12 col-sm-6 col-lg-4">
-      <div class="card-list">
-        <a 
-          href="#" 
-          class="card-item" 
-          style="background-color: #ECF0F3;" 
-          data-bs-toggle="modal" 
-          data-bs-target="#dynamicModal"
-          data-title="Alumni Page" 
-          data-img="img/res.png" 
-          data-link="https://wanplanet.github.io/Central/"
-          data-desc="Stay connected with your alma mater and fellow graduates!"
-        >
-          <img src="img/res.png" alt="Card Image">
-          <span class="developer">Developer</span>
-          <h3 style="font-weight: 500; font-size: 25px;">Alumni Page</h3>
-        </a>
-      </div>
-    </div>
+<!-- Alumni Page Project Card -->
+<div class="col-12 col-sm-6 col-lg-4">
+  <div class="card-list">
+    <a 
+      href="#" 
+      class="card-item" 
+      style="background-color: #ECF0F3;" 
+      data-bs-toggle="modal" 
+      data-bs-target="#dynamicModal"
+      data-title="Alumni Page" 
+      data-img="img/res.png" 
+      data-link="https://wanplanet.github.io/Central/"
+      data-desc="Stay connected with your alma mater and fellow graduates!"
+      data-tech='["HTML", "CSS", "Bootstrap"]'
+      data-tools='["VS Code", "GitHub"]'
+    >
+      <img src="img/res.png" alt="Card Image">
+      <span class="developer">Developer</span>
+      <h3 style="font-weight: 500; font-size: 25px;">Alumni Page</h3>
+    </a>
+  </div>
+</div>
 
-    <!-- === Project Card 3 === -->
-    <div class="col-12 col-sm-6 col-lg-4">
-      <div class="card-list">
-        <a 
-          href="#" 
-          class="card-item" 
-          style="background-color: #ECF0F3;" 
-          data-bs-toggle="modal" 
-          data-bs-target="#dynamicModal"
-          data-title="Inventory" 
-          data-img="img/inventory.png" 
-          data-link="https://wanplanet.github.io/inventory/"
-          data-desc="Easily track and manage your stock levels, stay organized, and optimize your operations!"
-        >
-          <img src="img/inventory.png" alt="Card Image">
-          <span class="developer">Developer</span>
-          <h3 style="font-weight: 500; font-size: 25px;">Inventory</h3>
-        </a>
-      </div>
-    </div>
-
-  </div> <!-- End of .row -->
+<!-- Inventory Project Card -->
+<div class="col-12 col-sm-6 col-lg-4">
+  <div class="card-list">
+    <a 
+      href="#" 
+      class="card-item" 
+      style="background-color: #ECF0F3;" 
+      data-bs-toggle="modal" 
+      data-bs-target="#dynamicModal"
+      data-title="Inventory" 
+      data-img="img/inventory.png" 
+      data-link="https://wanplanet.github.io/inventory/"
+      data-desc="Easily track and manage your stock levels!"
+      data-tech='["HTML", "CSS", "JavaScript", "Local Storage"]'
+      data-tools='["VS Code", "Git", "GitHub"]'
+    >
+      <img src="img/inventory.png" alt="Card Image">
+      <span class="developer">Developer</span>
+      <h3 style="font-weight: 500; font-size: 25px;">Inventory</h3>
+    </a>
+  </div>
+</div>
 
   <!-- View More Projects Button -->
   <div class="text-center mt-4">
@@ -233,51 +237,53 @@
 <!-- ======== END PROJECTS SECTION ======== -->
 <hr>
 
-<!-- ======== DYNAMIC MODAL ======== -->
+<!-- 🛠️ DYNAMIC MODAL FOR PROJECTS -->
 <div class="modal fade" id="dynamicModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content custom-modal">
-
-      <!-- Modal Header (Close Button) -->
-      <div class="modal-header">
-        <button 
-          type="button" 
-          class="btn-close" 
-          data-bs-dismiss="modal" 
-          aria-label="Close">
-        </button>
+    <div class="modal-content custom-modal" style="border-radius: 15px; border: none;">
+      <!-- Modal Header -->
+      <div class="modal-header" style="border-bottom: none;">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 
-      <!-- Modal Body (Image + Text Content) -->
-      <div class="modal-body d-flex align-items-center">
-
-        <!-- === Image Section === -->
-        <div class="modal-image col-md-6" style="padding: 5px;">
-          <img id="modalImage" src="" alt="Project Image" style="width: 100%;">
+      <!-- Modal Body -->
+      <div class="modal-body d-flex flex-column flex-md-row align-items-center p-4">
+        <!-- Image Section -->
+        <div class="modal-image col-md-6">
+          <img id="modalImage" src="" alt="Project Image" class="img-fluid rounded-3 shadow">
         </div>
 
-        <!-- === Text Section === -->
-        <div class="modal-text col-6">
-          <h2 
-            id="modalTitle" 
-            class="modal-title" 
-            style="font-weight: 700; font-size: 25px;">
-          </h2>
-          <p 
-            id="modalDesc" 
-            style="font-weight: 500; font-family: Montserrat;">
-          </p>
+        <!-- Text Content Section -->
+        <div class="modal-text col-md-6 ps-md-4 mt-4 mt-md-0">
+          <!-- Title -->
+          <h2 id="modalTitle" class="fw-bold mb-3" style="font-size: 1.8rem; color: #212529;"></h2>
 
-          <!-- Button to View the Project -->
+          <!-- Description -->
+          <p id="modalDesc" class="mb-4" style="font-family: 'Montserrat', sans-serif; color: #495057;"></p>
+
+          <!-- Tech Stack Section -->
+          <div class="tech-stack mb-4">
+            <h6 class="fw-semibold mb-2" style="font-size: 1rem; color: #6c757d;">TECH STACK</h6>
+            <div id="modalTech" class="d-flex flex-wrap gap-2"></div>
+          </div>
+
+          <!-- Tools Section -->
+          <div class="tools-used mb-4">
+            <h6 class="fw-semibold mb-2" style="font-size: 1rem; color: #6c757d;">TOOLS USED</h6>
+            <div id="modalTools" class="d-flex flex-wrap gap-2"></div>
+          </div>
+
+          <!-- Project Link -->
           <div class="modal-buttons">
-            <a id="modalLink" href="#" target="_blank">
-              <button class="btn btn-primary">View Project ➡️</button>
+            <a id="modalLink" href="#" target="_blank" class="text-decoration-none">
+              <button class="btn btn-primary px-4 py-2 rounded-pill" style="background-color: #ff014f; border: none; font-weight: 500;">
+                View Project ⭢️
+              </button>
             </a>
           </div>
+
         </div>
-
-      </div> <!-- End of modal-body -->
-
+      </div>
     </div>
   </div>
 </div>
@@ -513,52 +519,117 @@
 
 
 
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-  const dynamicModal = document.getElementById('dynamicModal');
+ <script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all project cards that trigger the modal
+  const projectCards = document.querySelectorAll('[data-bs-target="#dynamicModal"]');
   
-  dynamicModal.addEventListener('show.bs.modal', (event) => {
-    const triggerElement = event.relatedTarget; // Element that triggered the modal
-    const modalTitle = triggerElement.getAttribute('data-title');
-    const modalImage = triggerElement.getAttribute('data-img');
-    const modalDesc = triggerElement.getAttribute('data-desc');
-    const modalLink = triggerElement.getAttribute('data-link');
-
-    // Inject content into modal
-    document.getElementById('modalTitle').innerText = modalTitle;
-    document.getElementById('modalImage').src = modalImage;
-    document.getElementById('modalDesc').innerText = modalDesc;
-    document.getElementById('modalLink').href = modalLink;
+  // Add click event to each card
+  projectCards.forEach(card => {
+    card.addEventListener('click', function() {
+      // Get all data attributes
+      const title = this.getAttribute('data-title');
+      const img = this.getAttribute('data-img');
+      const link = this.getAttribute('data-link');
+      const desc = this.getAttribute('data-desc');
+      const techStack = JSON.parse(this.getAttribute('data-tech') || '[]');
+      const tools = JSON.parse(this.getAttribute('data-tools') || '[]');
+      
+      // Set basic content
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalDesc').textContent = desc;
+      document.getElementById('modalImage').src = img;
+      document.getElementById('modalLink').href = link;
+      
+      // Clear previous tech stack and tools
+      const techStackContainer = document.getElementById('modalTech');
+      const toolsContainer = document.getElementById('modalTools');
+      techStackContainer.innerHTML = '';
+      toolsContainer.innerHTML = '';
+      
+      // Add tech stack badges
+      techStack.forEach(tech => {
+        const badge = createTechBadge(tech);
+        techStackContainer.appendChild(badge);
+      });
+      
+      // Add tools badges
+      tools.forEach(tool => {
+        const badge = createToolBadge(tool);
+        toolsContainer.appendChild(badge);
+      });
+    });
   });
-});
-
-    </script>
-
-     <script>
-      document.querySelectorAll('.nav-link').forEach(link => {
-  link.addEventListener('click', () => {
-    document.querySelector('.nav-link.active').classList.remove('active');
-    link.classList.add('active');
-  });
-});
-     </script>
-<script>
-  // JavaScript to handle dynamic modal content
-  const dynamicModal = document.getElementById('dynamicModal1');
-  dynamicModal.addEventListener('show.bs.modal', function (event) {
-    // Button that triggered the modal
-    const button = event.relatedTarget;
+  
+  // Helper function to create tech badges
+  function createTechBadge(tech) {
+    const badge = document.createElement('span');
+    badge.className = 'badge';
     
-    // Extract data attributes from the clicked card
-    const title = button.getAttribute('data-title');
-    const image = button.getAttribute('data-image');
+    // Set different colors based on technology
+    switch(tech.toLowerCase()) {
+      case 'next.js':
+        badge.classList.add('bg-dark');
+        badge.innerHTML = '<i class="fab fa-js me-1"></i> Next.js';
+        break;
+      case 'react':
+        badge.classList.add('bg-info');
+        badge.innerHTML = '<i class="fab fa-react me-1"></i> React';
+        break;
+      case 'python':
+        badge.classList.add('bg-primary');
+        badge.innerHTML = '<i class="fab fa-python me-1"></i> Python';
+        break;
+      case 'html':
+        badge.classList.add('bg-danger');
+        badge.innerHTML = '<i class="fab fa-html5 me-1"></i> HTML';
+        break;
+      case 'css':
+        badge.classList.add('bg-warning');
+        badge.innerHTML = '<i class="fab fa-css3-alt me-1"></i> CSS';
+        break;
+      case 'javascript':
+        badge.classList.add('bg-warning');
+        badge.innerHTML = '<i class="fab fa-js me-1"></i> JavaScript';
+        break;
+      case 'bootstrap':
+        badge.classList.add('bg-purple');
+        badge.innerHTML = '<i class="fab fa-bootstrap me-1"></i> Bootstrap';
+        break;
+      case 'local storage':
+        badge.classList.add('bg-secondary');
+        badge.innerHTML = '<i class="fas fa-database me-1"></i> Local Storage';
+        break;
+      default:
+        badge.classList.add('bg-secondary');
+        badge.textContent = tech;
+    }
     
-    // Update modal content
-    const modalTitle = document.getElementById('dynamicModalTitle');
-    const modalImage = document.getElementById('dynamicModalImage');
-    modalTitle.textContent = title;
-    modalImage.src = image;
-  });
+    return badge;
+  }
+
+  // Helper function to create tool badges
+  function createToolBadge(tool) {
+    const badge = document.createElement('span');
+    badge.className = 'badge bg-secondary';
+    
+    switch(tool.toLowerCase()) {
+      case 'vs code':
+        badge.innerHTML = '<i class="fas fa-code me-1"></i> VS Code';
+        break;
+      case 'git':
+        badge.innerHTML = '<i class="fab fa-git-alt me-1"></i> Git';
+        break;
+      case 'github':
+        badge.innerHTML = '<i class="fab fa-github me-1"></i> GitHub';
+        break;
+      default:
+        badge.textContent = tool;
+    }
+    
+    return badge;
+  }
+});
 </script>
 
 <script>

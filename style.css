@@ -314,7 +314,7 @@ section {
 
 /* Buttons */
 button.btn {
-  width: 100%;
+  width: 90%;
   color: #333;
   border: none;
   padding: 10px 20px;
@@ -332,6 +332,31 @@ button.btn:hover {
   color: #fff;
 }
 
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: #f1f1f1;
+  color: #333;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #ddd;
+}
+
+.tech-badge i {
+  margin-right: 5px;
+  font-size: 1rem;
+}
+
+/* Color coding for specific tech */
+.tech-badge[data-tech="html"] { background-color: #e34c26; color: white; }
+.tech-badge[data-tech="css"] { background-color: #2965f1; color: white; }
+.tech-badge[data-tech="javascript"] { background-color: #f0db4f; color: black; }
+.tech-badge[data-tech="react"] { background-color: #61dbfb; color: black; }
+.tech-badge[data-tech="bootstrap"] { background-color: #563d7c; color: white; }
 /* Contact Link */
 .contact-link {
   color: black;
