@@ -4,7 +4,7 @@ Welcome to **OFOSUHENE's Project Portfolio**, a dynamic, responsive showcase of 
 
 ## 🔗 Live Site
 
-[🌍 View Portfolio](https://your-portfolio-link.com)
+[🌍 View Portfolio](https://wanplanet.github.io/Portfolio/)
 
 ---
 
